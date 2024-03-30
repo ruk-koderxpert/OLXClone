@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} add Item{% endblock title %}
+
+{% block body %}
+<div class="container mt-5 col-8 py-4">
+    <!-- <h3>Add Item Details</h3><br> -->
+    <h4 class="text-center alert alert-info mt-3">Add Item Details</h4>
+    <form action="/seller/addItem/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit" class="btn btn-primary ml-auto mr-auto w-50 mt-4" style="display: flex; justify-content: center;"><br><br>
+</form>
+</div>
+{% endblock %}

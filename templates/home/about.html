@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About {% endblock title %}
+
+
+{% block body %}
+
+<div class="container">
+    <h2 class="text-center mt-5 py-4">About Us</h2>
+    <br>
+
+    <div class="row" style="background: #fcfcfc">
+        <div class="col-md-6">
+            <img src="{% static '/images/banner1.jfif'%}" height="300px" width="100%">
+        </div>
+        <div class="col-6">
+            <h5 class="text-center mt-5 py-5">It should communicate the benefits and advantages of using your platform, as well as the problems it solves or the needs it meets. You should include your value proposition in your homepage, landing pages, and other key pages of your website.</h5>
+        </div>
+    </div>
+
+</div>
+
+{% endblock body %}

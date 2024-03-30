@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Update Profile {% endblock title %}
+{% block body %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container col-8 mt-5 py-4">
+    <h4 class="text-center alert alert-info">Update Profile</h4>
+    <form action= "/user/profile/update/" method='post'>
+        {% csrf_token %}
+        <!-- {{form.as_p}} -->
+        <div class="mb-3">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="fname" value="{{user.first_name}}" id="firstname" />
+        </div>
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="lname" value="{{user.last_name}}" id="lastname" />
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">User Name</label>
+            <input type="text" class="form-control" name="uname" value="{{request.user}}" id="username" />
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" value="{{user.email}}" id="email" />
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" value="{{user.password}}" id="password" />
+        </div>
+        <button type="submit" class="btn btn-primary ml-auto mr-auto w-50 mt-4" style="display: flex; justify-content: center;">Update</button>
+    </form>
+</div>
+  {% endblock %}
+  

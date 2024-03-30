@@ -1,0 +1,45 @@
+
+body{
+    /* background: url("{% static 'background1.jpeg' %}") no-repeat center center fixed; */
+    background-color: white;
+    /* margin: 0; */
+}
+.navbar{
+position: fixed;
+/* overflow: hidden; */
+/* background-color: #e3f2fd; */
+background-color: #f4f8fc;
+top: 0;
+width: 100%;
+z-index: 1;
+}
+.navbar-nav{
+z-index: 1;
+}
+.nav-bg{
+color: black;
+}
+.nav-bg:hover{
+    color: black;
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+    transform: translateX(0);
+}
