@@ -81,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.mysql',
         'NAME' : 'olx',
-        'USER' : 'root',
-        'PASSWORD' : '',
+        'USER' : 'admin',
+        'PASSWORD' : 'Rutvik@9012',
         'HOST' : 'localhost',
         'PORT' : '3306',
     }
